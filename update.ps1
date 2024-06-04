@@ -3,6 +3,8 @@ Invoke-WebRequest -Uri https://github.com/microsoft/cppwinrt/releases/download/2
 
 Invoke-WebRequest -Uri  https://github.com/microsoft/windows-rs/raw/master/crates/libs/bindgen/default/Windows.winmd -UserAgent [Microsoft.PowerShell.Commands.PSUserAgent]::FireFox -OutFile Windows.winmd
 
+Remove-Item -Recurse -Force .\include
+
 Move-Item -Force .\cppwinrtbin\bin\cppwinrt.exe .
 .\cppwinrt.exe -in '.\Windows.winmd' -out '.\include'
 
