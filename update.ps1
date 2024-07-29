@@ -1,3 +1,5 @@
+# https://github.com/microsoft/windows-rs/tree/master/crates/libs/bindgen/default
+
 Invoke-WebRequest -Uri https://github.com/microsoft/cppwinrt/releases/download/2.0.240405.15/Microsoft.Windows.CppWinRT.2.0.240405.15.nupkg -UserAgent [Microsoft.PowerShell.Commands.PSUserAgent]::FireFox -OutFile cppwinrt.7z
 7z.exe x -y cppwinrt.7z -ocppwinrtbin
 
