@@ -43,6 +43,12 @@ namespace winrt::impl
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportCommunicationErrorDetectedEventArgs)->GetDeferral(&result));
         return winrt::Windows::Foundation::Deferral{ result, take_ownership_from_abi };
     }
+    template <typename D> auto consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportEnterpriseManagementUIEventArgs<D>::Printer() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportEnterpriseManagementUIEventArgs)->get_Printer(&value));
+        return winrt::Windows::Devices::Printers::IppPrintDevice{ value, take_ownership_from_abi };
+    }
     template <typename D> auto consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportExtensionSession<D>::Printer() const
     {
         void* value{};
@@ -469,6 +475,20 @@ namespace winrt::impl
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
             *result = detach_from<winrt::Windows::Foundation::Deferral>(this->shim().GetDeferral());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportEnterpriseManagementUIEventArgs> : produce_base<D, winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportEnterpriseManagementUIEventArgs>
+    {
+        int32_t __stdcall get_Printer(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Windows::Devices::Printers::IppPrintDevice>(this->shim().Printer());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1148,6 +1168,7 @@ namespace std
 {
 #ifndef WINRT_LEAN_AND_MEAN
     template<> struct hash<winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportCommunicationErrorDetectedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportEnterpriseManagementUIEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportExtensionSession> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportExtensionSession2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportExtensionSession3> : winrt::impl::hash_base {};
@@ -1169,6 +1190,7 @@ namespace std
     template<> struct hash<winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportSettingsActivatedEventArgs2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportSettingsUISession> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportCommunicationErrorDetectedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportEnterpriseManagementUIEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportExtensionSession> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportExtensionTriggerDetails> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportIppCommunicationConfiguration> : winrt::impl::hash_base {};
