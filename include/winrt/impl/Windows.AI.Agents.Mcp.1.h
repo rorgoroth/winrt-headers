@@ -6,54 +6,33 @@
 #include "winrt/impl/Windows.AI.Agents.Mcp.0.h"
 WINRT_EXPORT namespace winrt::Windows::AI::Agents::Mcp
 {
-    struct WINRT_IMPL_EMPTY_BASES IMcpHttpConnectionResult :
+    struct WINRT_IMPL_EMPTY_BASES IMcpMessageFilterExperimental :
         winrt::Windows::Foundation::IInspectable,
-        impl::consume_t<IMcpHttpConnectionResult>
+        impl::consume_t<IMcpMessageFilterExperimental>
     {
-        IMcpHttpConnectionResult(std::nullptr_t = nullptr) noexcept {}
-        IMcpHttpConnectionResult(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+        IMcpMessageFilterExperimental(std::nullptr_t = nullptr) noexcept {}
+        IMcpMessageFilterExperimental(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
-    struct WINRT_IMPL_EMPTY_BASES IMcpNamedPipeConnectionResult :
+    struct WINRT_IMPL_EMPTY_BASES IMcpMessageFilterResponse :
         winrt::Windows::Foundation::IInspectable,
-        impl::consume_t<IMcpNamedPipeConnectionResult>
+        impl::consume_t<IMcpMessageFilterResponse>
     {
-        IMcpNamedPipeConnectionResult(std::nullptr_t = nullptr) noexcept {}
-        IMcpNamedPipeConnectionResult(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+        IMcpMessageFilterResponse(std::nullptr_t = nullptr) noexcept {}
+        IMcpMessageFilterResponse(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
-    struct WINRT_IMPL_EMPTY_BASES IMcpNamedPipeConnectionServer :
+    struct WINRT_IMPL_EMPTY_BASES IMcpMessageFilterResponseExperimental :
         winrt::Windows::Foundation::IInspectable,
-        impl::consume_t<IMcpNamedPipeConnectionServer>
+        impl::consume_t<IMcpMessageFilterResponseExperimental>
     {
-        IMcpNamedPipeConnectionServer(std::nullptr_t = nullptr) noexcept {}
-        IMcpNamedPipeConnectionServer(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+        IMcpMessageFilterResponseExperimental(std::nullptr_t = nullptr) noexcept {}
+        IMcpMessageFilterResponseExperimental(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
-    struct WINRT_IMPL_EMPTY_BASES IMcpServerRegistry :
+    struct WINRT_IMPL_EMPTY_BASES IMcpMessageFilterResponseExperimental2 :
         winrt::Windows::Foundation::IInspectable,
-        impl::consume_t<IMcpServerRegistry>
+        impl::consume_t<IMcpMessageFilterResponseExperimental2>
     {
-        IMcpServerRegistry(std::nullptr_t = nullptr) noexcept {}
-        IMcpServerRegistry(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
-    };
-    struct WINRT_IMPL_EMPTY_BASES IMcpServerRegistryStatics :
-        winrt::Windows::Foundation::IInspectable,
-        impl::consume_t<IMcpServerRegistryStatics>
-    {
-        IMcpServerRegistryStatics(std::nullptr_t = nullptr) noexcept {}
-        IMcpServerRegistryStatics(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
-    };
-    struct WINRT_IMPL_EMPTY_BASES IMcpSseConnectionServer :
-        winrt::Windows::Foundation::IInspectable,
-        impl::consume_t<IMcpSseConnectionServer>
-    {
-        IMcpSseConnectionServer(std::nullptr_t = nullptr) noexcept {}
-        IMcpSseConnectionServer(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
-    };
-    struct WINRT_IMPL_EMPTY_BASES IMcpStdioConnectionInfo :
-        winrt::Windows::Foundation::IInspectable,
-        impl::consume_t<IMcpStdioConnectionInfo>
-    {
-        IMcpStdioConnectionInfo(std::nullptr_t = nullptr) noexcept {}
-        IMcpStdioConnectionInfo(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+        IMcpMessageFilterResponseExperimental2(std::nullptr_t = nullptr) noexcept {}
+        IMcpMessageFilterResponseExperimental2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
 }
 #endif
