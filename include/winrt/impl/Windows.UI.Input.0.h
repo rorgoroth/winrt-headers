@@ -142,12 +142,12 @@ WINRT_EXPORT namespace winrt::Windows::UI::Input
         ThreeFingerTap = 0,
         FourFingerTap = 1,
         FiveFingerTap = 2,
-        ThreeFingerPressDown = 3,
-        FourFingerPressDown = 4,
-        FiveFingerPressDown = 5,
-        ThreeFingerPressUp = 6,
-        FourFingerPressUp = 7,
-        FiveFingerPressUp = 8,
+        ThreeFingerPress = 3,
+        FourFingerPress = 4,
+        FiveFingerPress = 5,
+        ThreeFingerRelease = 6,
+        FourFingerRelease = 7,
+        FiveFingerRelease = 8,
     };
     enum class TouchpadGlobalGestureKinds : uint32_t
     {

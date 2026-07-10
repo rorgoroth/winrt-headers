@@ -243,6 +243,7 @@ export module winrt;
 #include "winrt/Windows.Management.Policies.h"
 #include "winrt/Windows.Management.Setup.h"
 #include "winrt/Windows.Management.Update.h"
+#include "winrt/Windows.Management.Update.Cluster.h"
 #include "winrt/Windows.Management.Workplace.h"
 #include "winrt/Windows.Media.h"
 #include "winrt/Windows.Media.AppBroadcasting.h"
